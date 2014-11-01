@@ -43,11 +43,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/tinyspeck/hubot-slack.git"
+    "url": "http://github.com/nanonanomachine/hubot-slack.git"
   },
   "bugs": {
-    "url": "https://github.com/tinyspeck/hubot-slack/issues",
-    "email": "help@tinyspeck.com"
+    "url": "http://github.com/nanonanomachine/hubot-slack/issues",
+    "email": "koyama.gakugai@gmail.com"
   },
   "devDependencies": {
     "coffee-script": "~1.7.1",
