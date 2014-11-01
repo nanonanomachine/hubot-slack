@@ -64,6 +64,7 @@ class Slack extends Adapter
       icon_url    : message.icon_url
       icon_emoji  : message.icon_emoji
       channel     : channel
+      text        : @escapeHtml message.text
       attachments : attachments
       link_names  : @options.link_names if @options?.link_names?
     @post "/services/hooks/hubot", args
