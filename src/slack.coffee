@@ -48,8 +48,10 @@ class Slack extends Adapter
 
   custom: (message, data)->
     @log "Sending custom message"
-    @log "message: #{message}"
-    @log "data: #{data}"
+    @log "message here"
+    @log message
+    @log "data here"
+    @log data
     
     channel = message.reply_to || @channelMapping[message.room] || message.room
     data = [data] unless Array.isArray data
@@ -67,7 +69,7 @@ class Slack extends Adapter
       icon_url    : message.icon_url
       icon_emoji  : message.icon_emoji
       channel     : channel
-      text        : @escapeHtml message.text
+      text        : "test dayo-n"
       attachments : attachments
       link_names  : @options.link_names if @options?.link_names?
     @post "/services/hooks/hubot", args
