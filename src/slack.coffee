@@ -48,10 +48,12 @@ class Slack extends Adapter
 
   custom: (message, data)->
     @log "Sending custom message"
-    @log "message here"
-    @log message.toString()
-    @log "data here"
-    @log data.toString()
+    @log "username here"
+    @log message.username
+    @log "icon_url here"
+    @log message.icon_url
+    @log "text here"
+    @log message.text
     
     channel = message.reply_to || @channelMapping[message.room] || message.room
     data = [data] unless Array.isArray data
